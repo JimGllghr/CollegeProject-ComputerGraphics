@@ -1,0 +1,44 @@
+#include "colors.inc"
+#include "metals.inc"
+#include "woods.inc"  
+#include  "textures.inc"
+camera {
+//   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
+   location<-30,15,15>
+   look_at <0,0,0>
+}
+light_source {< 2, 13, -10> color White
+} 
+
+//#declare possible_body = lathe{quadratic_spline 8,<0.28,0.87>,<0.42,9>, <0.49, 9.38>,<0.3, 9.72>, <0.26,12.03>,<0.23,12.49>,<0.88, 13.1>,<0.91,13.44>,<1.63, 13.44>,<1.65,13.1>,<2.14,12.58>,<2.3,12.26>,<2.14,9.7>,<1.82,9.38>,<1.96,9.05>,<1.96,0.77>, <1.05,0.1>}
+
+
+
+#declare light_main = union {cylinder{<1.29,0.74>, <1.29, 10.19>, 0.93}    
+                            texture{Glass}}
+
+#declare light_glass = difference{sphere{<1.29,0.74> 0.93}
+                                    object{light_main}
+                            texture{Glass}} 
+#declare light_base = lathe{linear_spline 18,<0.36, 10.19>,<0.54,10.62>,<0.36,10.92>,<0.33,13.37>,<0.26,13.75>,<0.26,14.11>,<0.49,14.22>,<1.01,14.76>,<1.03,15.19>,<1.82,15.17>,<1.87,14.79>,<2.32,14.24>,<2.55,14.15>,<2.64,13.82>,<2.52,13.5>,<2.37, 10.88>,<2.21,10.59>,<2.25,10.21> texture{T_Silver_1B}}
+
+#declare light_full = union{object{light_main} object{light_glass} object{light_base}}                                                                   
+#declare bishop_top = sphere{<0, 1.9,0> 0.8}
+                                    
+#declare bishop_sides = cylinder{<0,0>, <0,2>, 0.6 }    
+
+#declare bishop_body = difference {object{bishop_sides}
+                                object{bishop_top}   
+                                
+                                }
+#declare bishop_full = union{ object{bishop_body} object{bishop_top}
+                                 texture{Glass}
+                                }                                                  
+                               
+
+
+
+/* Horizontal Plane */
+plane{ <0,1,0>, -0.012 pigment{ rgb<0.2,0.8,0.4> } }        
+
+object{light_full}

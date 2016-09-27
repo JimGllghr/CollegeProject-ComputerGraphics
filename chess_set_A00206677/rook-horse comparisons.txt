@@ -1,0 +1,9 @@
+rook base width = 1
+horse base width =1.46
+
+height base = .98
+top height = 3.02
+
+ratio .98:3.02
+
+1.1

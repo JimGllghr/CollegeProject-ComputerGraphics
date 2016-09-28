@@ -1,13 +1,21 @@
+
+
+
+global_settings{ assumed_gamma 1.3}
 #include "colors.inc"
 #include "metals.inc"
 #include "woods.inc"  
 #include  "textures.inc"
-camera { 
-   location<10,5,10>
-   look_at <1,2,2>
-}
+#declare camera1 = camera{ 
+   location<10,5,10> 
+   right     x*image_width/image_height
+   look_at <1,2,2>  
+   rotate<0,-360*(clock+0.10),0>
+}    
+camera{camera1}
 light_source {< 2, 13, -10> color White
 } 
+
 
 
 #declare base = cone{<1.29,0> 0.29,<1.29,0.29>,0.49}
@@ -24,7 +32,7 @@ light_source {< 2, 13, -10> color White
 
 #declare wire =  union{cylinder{<1.29,1.39>,<1.29,3.68>,0.03} texture {
         pigment {color rgb <1, 1, 1>}
-        finish {ambient .8 diffuse .6}
+        finish {ambient 1 }
       }} 
 #declare pawn = union{object{full_bottom} object{glass_full} object{wire}}
 

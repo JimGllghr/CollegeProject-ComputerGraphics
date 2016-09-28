@@ -43,4 +43,4 @@ texture{Glass}}
 /* Horizontal Plane */
 plane{ <0,1,0>, -0.012 pigment{ rgb<0.2,0.8,0.4> } }        
 
-object{bishop}
+object{bishop translate <0,.5,0>}

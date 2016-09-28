@@ -10,7 +10,7 @@ light_source {< 2, 13, -10> color White
 } 
 
 #declare base = cone{<1.29,0> 0.29,<1.29,0.29>,0.49}
-#declare middle = union{cone{<1.29,0.29>,0.49,<1.29,0.39>,0.69} texture{T_Copper_1B}}
+#declare middle = union{cone{<1.29,0.29>,0.49,<1.29,0.39>,0.69} texture{T_Copper_p1B}}
 #declare top = union{cylinder{<1.29,0.39>,<1.29,1.39>,0.69} texture{T_Copper_1B}} 
 #declare glass_bottom = union{cone{<1.29,1.39>,0.69,<1.29,1.68>,0.89} texture{Glass}}  
 #declare glass_centre = union{cone{<1.29,1.68>,0.89,<1.29,4.68>,1.58} texture{Glass}}

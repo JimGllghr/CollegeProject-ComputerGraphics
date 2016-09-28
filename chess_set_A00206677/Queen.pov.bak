@@ -1,0 +1,30 @@
+
+#include "colors.inc"
+  background{White}
+  camera {
+    angle 10
+    location <40, 40, -50>
+    look_at <0, 2, 0>
+  }
+  light_source {
+    <20, 20, -20> color White
+  }
+ lathe 
+ {
+    8,
+    <0.0,  0.0>,
+    <1.41,   0.18>,
+    <2.89,   -2.44>,
+    <2.79,   -2.44>,
+    <1.69,   0.56>,
+    <2.24,   1.11>,
+    <2.53,  1.75>,
+    <2.73,  2.18>      
+    
+    < , >
+    pigment { Blue }
+    finish {
+      ambient .3
+      phong .75
+    }
+  }

@@ -7,7 +7,7 @@ background{White}
 camera 
 {
     angle 10
-    location <40, 10, 0>
+    location <0, 20, 0>
     look_at <0, 2, 0>
 }    
 
@@ -33,17 +33,13 @@ lathe
     <0.07,  3.68>,
     <0.06,  3.82>,
     <0,     3.89>      
-    texture{Orange_Glass}
+    texture{Glass}
     finish 
     {
         ambient .3
         phong .75
     } 
 }          
-
-  
-
-       
 
 #declare nixieCentre =   
 lathe 
@@ -67,7 +63,7 @@ lathe
 lathe 
 {
     27,               
-    <0.1,  0.68>,      
+    <0.1,  0.67>,      
     <0.03,  0.67>,      
     <0.03,  0.8>,  
     <0.64,   0.8>,  
@@ -104,10 +100,10 @@ lathe
 }           
    
   
-#declare prong1 =     
-cylinder { <0.72,0.56,0>,<0,0,0>, 0.30 
+#declare prong =     
+cylinder { <0.72,0.56,0>,<0.72,0,0>, 0.08 
 
-           scale <1,1,1>
+           //scale <1,1,1>
          } 
     
 
@@ -128,6 +124,13 @@ difference
    
                      
 object {nixieShell}
-object {nixieCentre}  
-object {prong1}      
+object {nixieCentre}               
+object {prong translate <0,0.4,0>}   
+object {prong translate <-0.64++++++,0.4,0.46>}   
+object {prong translate <0.0,0.4,0>}   
+object {prong translate <-0.19,0.4,-0.48>}   
+object {prong translate <-0.7,0.4,0.7>}   
+object {prong translate <-0.126,0.4,-.43>}   
+object {prong translate <-0.14,0.4,>}   
+object {prong translate <-0.119,0.4,0.51>}      
 object {filiment}

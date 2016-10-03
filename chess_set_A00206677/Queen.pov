@@ -7,7 +7,7 @@ background{White}
 camera 
 {
     angle 10
-    location <0, 20, 0>
+    location <40, 20, 0>
     look_at <0, 2, 0>
 }    
 
@@ -101,7 +101,7 @@ lathe
    
   
 #declare prong =     
-cylinder { <0.72,0.56,0>,<0.72,0,0>, 0.08 
+cylinder { <0.72,0.56,0>,<0.72,0,0>, 0.04 
 
            //scale <1,1,1>
          } 
@@ -125,12 +125,13 @@ difference
                      
 object {nixieShell}
 object {nixieCentre}               
-object {prong translate <0,0.4,0>}   
-object {prong translate <-0.64++++++,0.4,0.46>}   
-object {prong translate <0.0,0.4,0>}   
-object {prong translate <-0.19,0.4,-0.48>}   
-object {prong translate <-0.7,0.4,0.7>}   
-object {prong translate <-0.126,0.4,-.43>}   
-object {prong translate <-0.14,0.4,>}   
-object {prong translate <-0.119,0.4,0.51>}      
+object {prong translate <0.,0.1,0>}   
+object {prong translate <-0.19,0.1,-0.49>}   
+object {prong translate <-0.71,0.1,0.71>}   
+//object {prong translate <0.64,0.4,0.29>}   
+object {prong translate <-1.18,0.1, -0.54>}   
+object {prong translate <-0.125,0.1,0.47>}   
+object {prong translate <-0.71,0.1,-0.71>}    
+//object {prong translate <-0.16,0.4,0.45>}   
+object {prong translate <-1.4,0.1,0>}      
 object {filiment}

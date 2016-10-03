@@ -29,7 +29,7 @@ light_source {< 2, 13, -10> color White
 #declare pawn = union{object{full_bottom} object{glass_full} object{wire}}
 
 plane{ <0,1,0>, -0.012 pigment{ rgb<0.2,0.8,0.4> } }  
-object{pawn}
+object{pawn}    
 
 
 

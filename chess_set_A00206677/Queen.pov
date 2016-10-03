@@ -3,7 +3,7 @@
 #include "woods.inc"  
 #include  "textures.inc"  
   
-background{White}
+background{White}    /**
 camera 
 {
     angle 10
@@ -14,7 +14,7 @@ camera
 light_source 
 {
     <20, 20, -20> color White
-}  
+}                       **/
 
 #declare nixieShell =   
 lathe 
@@ -122,16 +122,17 @@ difference
     }      
 }
    
-                     
+#declare queen =       
+union{         
 object {nixieShell}
 object {nixieCentre}               
 object {prong translate <0.,0.1,0>}   
 object {prong translate <-0.19,0.1,-0.49>}   
-object {prong translate <-0.71,0.1,0.71>}   
-//object {prong translate <0.64,0.4,0.29>}   
+object {prong translate <-0.71,0.1,0.71>}     
 object {prong translate <-1.18,0.1, -0.54>}   
 object {prong translate <-0.125,0.1,0.47>}   
 object {prong translate <-0.71,0.1,-0.71>}    
-//object {prong translate <-0.16,0.4,0.45>}   
 object {prong translate <-1.4,0.1,0>}      
-object {filiment}
+object {filiment}               
+                   
+                   }

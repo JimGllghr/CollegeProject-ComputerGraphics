@@ -4,7 +4,8 @@
 #include "horse.pov"   
 #include "pawn.pov" 
 #include "rook.pov"
-#include "bishop.pov"
+#include "bishop.pov" 
+#include "Queen.pov"
 camera {
 //   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
    location<13,5,20>
@@ -50,7 +51,7 @@ object{pawn_gold scale .5 translate <0,0,7.5>}
 object{rook_gold scale .5 translate <-1.5,0,-3>}   
 object{horse_gold scale .5 translate <-1.5,0,-1.5>}
 object{bishop_gold scale .3 translate <-1.5,0,0>}
-object{gold_pawn translate <-1.5,0,1.5>}
+object{queen translate <-1.5,0,1.5>}
 object{gold_pawn translate <-1.5,0,3>}
 object{bishop_gold scale .3 translate <-1.5,0,4.5>}
 object{horse_gold scale .5 translate <-1.5,0,6>}    

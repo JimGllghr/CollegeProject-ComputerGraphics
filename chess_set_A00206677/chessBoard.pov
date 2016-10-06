@@ -6,19 +6,20 @@
 #include "rook.pov"
 #include "bishop.pov"
 camera {
-//   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
    location<13,5,10>
    look_at <5,2,2>
 }
-/*light_source {< 5, 13, -10> color Red
-}  */  
-
+/*  PAWNS */  
+#declare BG_light = union{object{pawn rotate<180,0,0>} texture {
+        pigment {color rgb <1, 1, 1>}
+        finish {ambient .8 diffuse .6}
+      }}   
 light_source {
-    <5, 10, -10>
+    <3, 8, -6>
     rgb<.709,0.69,.886>
-    looks_like { pawn }
+    looks_like { BG_light }
   }
-/*  PAWNS */
+
 #declare pawn_body = lathe{ quadratic_spline 8,
                        <0,0>,<0.5,0>,<0.5,0.25>,<0.4,0.35>,<0.2,0.95>,
                        <0.25,1>,<0.2,1.05>,<0,1.1> 

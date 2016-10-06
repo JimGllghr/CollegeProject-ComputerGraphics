@@ -15,7 +15,7 @@ camera {
 #declare middle = union{cone{<0,0.29>,0.49,<0,0.39>,0.69} }
 //#declare top = union{cylinder{<0,0.39>,<0,1.39>,0.69} } 
 #declare top = lathe{linear_spline 13, <0,0.39>,<0.69, 0.39>, <0.69, 0.59>,<0.66, 0.59>,<0.66, 0.79>,<0.69, 0.79>,<0.69, 0.89>,<0.66, 0.89>,<0.66, 1.09>,<0.69, 1.09>,/*do not touch*/<0.69, 1.39>, <0,1.39>,<0,0.39>}
-#declare full_bottom = union{object{base} object{middle} object{top}} 
+#declare full_bottom = union{object{base} object{middle} object{top} texture{T_Copper_1B}} 
 #declare gold_bottom = union{object{base} object{middle} object{top} texture{T_Gold_1B}} 
 #declare silver_bottom = union{object{base} object{middle} object{top} texture{T_Silver_1B}} 
 #declare glass_bottom = union{cone{<0,1.39>,0.75,<0,1.79>, 1.0}  texture{Glass}}
@@ -26,8 +26,8 @@ camera {
 
 
 
-#declare wire =  union{object{pawn_outline rotate <0, 90, 0> scale 1.2 translate <0,1.39>} texture {
-        pigment {color rgb <1,0,0>}
+#declare wire =  union{object{cylinder{<0,1.39><0,4.39>.01}} texture {
+        pigment {color rgb <1,1,1>}
         finish {ambient 1.8 diffuse .6}
       }}  
  

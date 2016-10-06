@@ -7,11 +7,17 @@
 #include "bishop.pov"
 camera {
 //   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
-   location<13,5,20>
+   location<13,5,10>
    look_at <5,2,2>
 }
-light_source {< 2, 13, -10> color White
-}
+/*light_source {< 5, 13, -10> color Red
+}  */  
+
+light_source {
+    <5, 10, -10>
+    color Red
+    looks_like { pawn }
+  }
 /*  PAWNS */
 #declare pawn_body = lathe{ quadratic_spline 8,
                        <0,0>,<0.5,0>,<0.5,0.25>,<0.4,0.35>,<0.2,0.95>,
@@ -30,7 +36,7 @@ light_source {< 2, 13, -10> color White
                         }
                                                               
 /* Horizontal Plane */
-plane{ <0,1,0>, -0.012 pigment{ rgb<0.2,0.8,0.4> } }
+plane{ <0,1,0>, -0.012 pigment{ rgb<0,0,0> } }
 /* Chess Board */
 box{ <9.75,-0.01,8.25> <-2.25,0.0,-3.75> 
                 pigment{checker pigment{image_map{"whitemarble.png"}},pigment{image_map{"marble.png"}} 
@@ -73,4 +79,7 @@ object{silver_pawn translate <9,0,1.5>}
 object{silver_pawn translate <9,0,3>}
 object{bishop_silver scale .3 translate <9,0,4.5>}
 object{horse_silver scale .5 translate <9,0,6>}    
-object{rook_silver scale.5 translate <9,0,7.5>}      
+object{rook_silver scale.5 translate <9,0,7.5>}   
+ 
+
+//object{pawn rotate <180,0,0> translate<5, 10, 2>}   

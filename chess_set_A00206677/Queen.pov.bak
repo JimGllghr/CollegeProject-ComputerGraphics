@@ -1,136 +1,30 @@
+
 #include "colors.inc"
-#include "metals.inc"
-#include "woods.inc"  
-#include  "textures.inc"  
-  
-background{White}
-camera 
-{
+  background{White}
+  camera {
     angle 10
-    location <0, 20, 0>
+    location <40, 40, -50>
     look_at <0, 2, 0>
-}    
-
-light_source 
-{
+  }
+  light_source {
     <20, 20, -20> color White
-}  
-
-#declare nixieShell =   
-lathe 
-{
-    13,
-    <0.0,  0.24>,
-    <0.44,   0.25>,
-    <0.82,   0.28>,
-    <0.89,   0.39>,
-    <0.94,   0.52>,
-    <0.95,   3.09>,
-    <0.87,  3.27>,
-    <0.74,  3.42>,
-    <0.5,   3.52>,
-    <0.13,  3.61>,
-    <0.07,  3.68>,
-    <0.06,  3.82>,
-    <0,     3.89>      
-    texture{Glass}
-    finish 
-    {
-        ambient .3
-        phong .75
-    } 
-}          
-
-#declare nixieCentre =   
-lathe 
-{
-    4,
-    <0.0,  0.57>,
-    <0.89,   0.57>,
-    <0.89,   0.71>,
-    <0.0,   0.71>   
-    texture{Brass_Metal}
-    finish 
-    {
-        ambient .3
-        phong .75
-    } 
-}
-     
-
-  
-#declare queenBody =   
-lathe 
-{
-    27,               
-    <0.1,  0.67>,      
-    <0.03,  0.67>,      
-    <0.03,  0.8>,  
-    <0.64,   0.8>,  
-    <0.64,   1.1>,
-    <0.58,   1.1>, 
-    <0.24,   2.22>,   
-    <0.39,   2.23>, 
-    <0.39,  2.38>, 
-    <0.3,  2.38>,  
-    <0.43,  2.68>, 
-    <0.14,  2.7>,  
-    <0.14,  2.95>, 
-    <0,  2.95>,
-    <0,  2.9>,
-    <0.09,  2.9>,  
-    <0.09,  2.64>,
-    <0.37,  2.64>,    
-    <0.23,  2.34>,
-    <0.35,  2.34>, 
-    <0.35,  2.27>,
-    <0.19,  2.27>,
-    <0.19,  2.17>,
-    <0.54,  1.05>,
-    <0.59,  1.05>,
-    <0.58,  0.84>,
-    <0.00,  0.84>
-    texture{Gold_Metal} 
-    //scale <1.1,1.1, 1.1>
-    finish 
-    {
-        ambient .3
-        phong .75
-    } 
-}           
-   
-  
-#declare prong =     
-cylinder { <0.72,0.56,0>,<0.72,0,0>, 0.08 
-
-           //scale <1,1,1>
-         } 
+  }
+ lathe 
+ {
+    8,
+    <0.0,  0.0>,
+    <1.41,   0.18>,
+    <2.89,   -2.44>,
+    <2.79,   -2.44>,
+    <1.69,   0.56>,
+    <2.24,   1.11>,
+    <2.53,  1.75>,
+    <2.73,  2.18>      
     
-
-#declare filiment =          
-difference
-{    
-    object {queenBody}
-    box 
-    { 
-        <0.05, -10, -1.00>,< 10, 10, 1.00>   
-    } 
-              
-    box 
-    { 
-        <-0.05, -10, -1.00>,< -10, 10, 1.00>   
-    }      
-}
-   
-                     
-object {nixieShell}
-object {nixieCentre}               
-object {prong translate <0,0.4,0>}   
-object {prong translate <-0.64++++++,0.4,0.46>}   
-object {prong translate <0.0,0.4,0>}   
-object {prong translate <-0.19,0.4,-0.48>}   
-object {prong translate <-0.7,0.4,0.7>}   
-object {prong translate <-0.126,0.4,-.43>}   
-object {prong translate <-0.14,0.4,>}   
-object {prong translate <-0.119,0.4,0.51>}      
-object {filiment}
+    < , >
+    pigment { Blue }
+    finish {
+      ambient .3
+      phong .75
+    }
+  }

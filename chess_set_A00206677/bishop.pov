@@ -6,8 +6,8 @@ camera {
    location<15,15,15>
    look_at <0,5,0>
 }
-light_source {< 2, 13, -10> color White
-} 
+/*light_source {< 2, 13, -10> color White
+} */
 
 
 #declare light_main = union {cylinder{<0,0.74>, <0, 10.19>, 0.93}    
@@ -32,18 +32,26 @@ texture{Glass}}
 #declare glass_full = union{object{light_main} object{light_glass} object{light_base} object{utmost_body}}    
 
 #declare wire = union{cylinder{<0, 5>, <0, 10.19>, 0.03}   texture {
-        pigment {color rgb <1, 1, 1>}
-        finish {ambient .8 diffuse .6}
+        pigment {color rgb <1,0,0>}
+        finish {ambient 2.8 diffuse 5.6} 
+      }} 
+#declare wire_gold = union{cylinder{<0, 5>, <0, 10.19>, 0.03}   texture {
+        pigment {color rgb <.6,.97,.92>}
+        finish {ambient 2.8 diffuse 5.6} 
+      }}
+#declare wire_silver = union{cylinder{<0, 5>, <0, 10.19>, 0.03}   texture {
+        pigment {color rgb <.607,0,.172>}
+        finish {ambient 2.8 diffuse 5.6} 
       }}
 
 #declare bishop = union{object{full_body} object{glass_full} object{wire}}    
-#declare bishop_gold = union{object{gold_body} object{glass_full} object{wire}}
-#declare bishop_silver = union{object{silver_body} object{glass_full} object{wire}}
+#declare bishop_gold = union{object{gold_body} object{glass_full} object{wire_gold}}
+#declare bishop_silver = union{object{silver_body} object{glass_full} object{wire_silver}}
                                                                                                    
                                
 
 
 
 /* Horizontal Plane */
-plane{ <0,1,0>, -0.012 pigment{ rgb<0.2,0.8,0.4> } }        
+//plane{ <0,1,0>, -0.012 pigment{ rgb<0.2,0.8,0.4> } }        
 

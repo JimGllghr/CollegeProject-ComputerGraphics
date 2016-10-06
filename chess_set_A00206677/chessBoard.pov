@@ -15,7 +15,7 @@ camera {
 
 light_source {
     <5, 10, -10>
-    color White
+    rgb<.709,0.69,.886>
     looks_like { pawn }
   }
 /*  PAWNS */
@@ -36,7 +36,7 @@ light_source {
                         }
                                                               
 /* Horizontal Plane */
-plane{ <0,1,0>, -0.012 pigment{ rgb<.34,0,.039> } }
+plane{ <0,2,0>, -0.012 pigment{ rgb<.043,0.007,.388> } }
 /* Chess Board */
 box{ <9.75,-0.01,8.25> <-2.25,0.0,-3.75> 
                 pigment{checker pigment{image_map{"whitemarble.png"}},pigment{image_map{"marble.png"}} 

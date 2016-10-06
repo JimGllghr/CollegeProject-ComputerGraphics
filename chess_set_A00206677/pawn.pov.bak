@@ -29,11 +29,21 @@ camera {
         pigment {color rgb <1,0,0>}
         finish {ambient 1.8 diffuse .6}
       }}  
+ 
+ #declare wire_gold =  union{object{pawn_outline rotate <0, 90, 0> scale 1.2 translate <0,1.39>} texture {
+        pigment {color rgb <.6,.97,.92>}
+        finish {ambient 1.8 diffuse .6}
+      }}  
+
+#declare wire_silver =  union{object{pawn_outline rotate <0, 90, 0> scale 1.2 translate <0,1.39>} texture {
+        pigment {color rgb <.607,0,.172>}
+        finish {ambient 1.8 diffuse .6}
+      }}  
 
 
 #declare pawn = union{object{full_bottom} object{glass_full} object{wire}}
-#declare pawn_gold = union{object{gold_bottom} object{glass_full} object{wire}}
-#declare pawn_silver = union{object{silver_bottom} object{glass_full} object{wire}}
+#declare pawn_gold = union{object{gold_bottom} object{glass_full} object{wire_gold}}
+#declare pawn_silver = union{object{silver_bottom} object{glass_full} object{wire_silver}}
 
 //plane{ <0,1,0>, -0.012 pigment{ rgb<0.2,0.8,0.4> } }  
 //object{pawn}    

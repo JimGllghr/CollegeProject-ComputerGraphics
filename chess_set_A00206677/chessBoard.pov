@@ -55,10 +55,10 @@ object{pawn_gold scale .5 translate <0,0,7.5>}
 //gold higher ups   
 object{rook_gold scale .5 translate <-1.5,0,-3>}   
 object{horse_gold scale .5 translate <-1.5,0,-1.5>}
-object{bishop_gold scale .3 translate <-1.5,0,0>}
+object{bishop_gold scale .3 rotate<180,0,0> translate <-1.5,4.6,0>}
 object{gold_pawn translate <-1.5,0,1.5>}
 object{gold_pawn translate <-1.5,0,3>}
-object{bishop_gold scale .3 translate <-1.5,0,4.5>}
+object{bishop_gold scale .3 rotate<180,0,0> translate <-1.5,4.6,4.5>}
 object{horse_gold scale .5 translate <-1.5,0,6>}    
 object{rook_gold scale .5 translate <-1.5,0,7.5>} 
 
@@ -74,10 +74,10 @@ object{pawn_silver scale .5 translate <7.5,0,7.5>}
 //silver higher ups  
 object{rook_silver scale.5 translate <9,0,-3>}   
 object{horse_silver scale .5 translate <9,0,-1.5>}
-object{bishop_silver scale .3 translate <9,0,0>}
+object{bishop_silver scale .3 rotate<180,0,0> translate <9,4.6,0>}
 object{silver_pawn translate <9,0,1.5>}
 object{silver_pawn translate <9,0,3>}
-object{bishop_silver scale .3 translate <9,0,4.5>}
+object{bishop_silver scale .3 rotate<180,0,0> translate <9,4.6,4.5>}
 object{horse_silver scale .5 translate <9,0,6>}    
 object{rook_silver scale.5 translate <9,0,7.5>}   
  

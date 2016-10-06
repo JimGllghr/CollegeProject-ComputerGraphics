@@ -22,14 +22,22 @@ camera {
         pigment {color rgb <1,0,0>}
         finish {ambient 2.8 diffuse .6}
       }}
+#declare wire_gold =  union{object{rook_outline scale 1.2 translate<0,1.39>} texture {
+        pigment {color rgb <.6,.97,.92>}
+        finish {ambient 2.8 diffuse .6}
+      }}
+#declare wire_silver =  union{object{rook_outline scale 1.2 translate<0,1.39>} texture {
+        pigment {color rgb <.607,0,.172>}
+        finish {ambient 2.8 diffuse .6}
+      }}
 
 #declare full_glass = union {object{glass_bottom} object{glass_true_centre} object{glass_top} object{glass_point}}     
 #declare full_base = union {object{base} object{middle} object{top}}  
 #declare gold_base = union {object{base} object{middle} object{top} texture{T_Gold_1B}}
 #declare silver_base = union {object{base} object{middle} object{top} texture{T_Silver_1B}}                                                
 #declare rook = union{object{full_glass} object{full_base} object{wire}}   
-#declare rook_gold = union{object{full_glass} object{gold_base} object{wire}}  
-#declare rook_silver = union{object{full_glass} object{silver_base} object{wire}}                                                                       
+#declare rook_gold = union{object{full_glass} object{gold_base} object{wire_gold}}  
+#declare rook_silver = union{object{full_glass} object{silver_base} object{wire_silver}}                                                                       
                                                                         
 
 

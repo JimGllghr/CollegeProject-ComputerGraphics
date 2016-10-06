@@ -22,7 +22,8 @@ texture{Glass}}
 
 #declare copper = union {cylinder{<0, 10.63>,<0, 10.74>, 0.83 } texture{T_Copper_1B}}
 
-#declare body = union {cylinder{<0,10.74>,<0, 13.5>,1} }   
+//#declare body = union {cylinder{<0,10.74>,<0, 13.5>,1} }
+#declare body = lathe {linear_spline 6, <0,10.74>,<1,10.74>, <1, 13.0> ,<1.1, 13.0> ,<1.1, 13.5> ,<0,10.74>}   
 #declare upper_body = union{difference{sphere{<0,13.5>, 0.93} object{body}} }
 #declare utmost_body = union{cylinder{<0,13.5>,<0,14.5>, 0.43} }
 #declare full_body = union{object{body} object{copper} object{upper_body}}             

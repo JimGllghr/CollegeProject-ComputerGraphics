@@ -13,7 +13,8 @@ camera {
 
 #declare base = cone{<0,0> 0.29,<0,0.29>,0.49}
 #declare middle = union{cone{<0,0.29>,0.49,<0,0.39>,0.69} }
-#declare top = union{cylinder{<0,0.39>,<0,1.39>,0.69} }
+//#declare top = union{cylinder{<0,0.39>,<0,1.39>,0.69} } 
+#declare top = lathe{linear_spline 13, <0,0.39>,<0.69, 0.39>, <0.69, 0.59>,<0.66, 0.59>,<0.66, 0.79>,<0.69, 0.79>,<0.69, 0.89>,<0.66, 0.89>,<0.66, 1.09>,<0.69, 1.09>,/*do not touch*/<0.69, 1.39>, <0,1.39>,<0,0.39>}
 #declare full_bottom = union{object{base} object{middle} object{top}} 
 #declare gold_bottom = union{object{base} object{middle} object{top} texture{T_Gold_1B}} 
 #declare silver_bottom = union{object{base} object{middle} object{top} texture{T_Silver_1B}} 

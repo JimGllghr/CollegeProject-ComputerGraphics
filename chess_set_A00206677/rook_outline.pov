@@ -2,13 +2,7 @@
 #include "metals.inc"
 #include "woods.inc" 
 
-camera {
-//   location <3.75-8*cos(2*pi*clock), 5, 2.25-8*(sin(2*pi*clock))>  
-   location<10,5,0>
-   look_at <1,2,0>
-}
-/*light_source {< 2, 13, -10> color White
-}               */
+
 
 #declare rook_top = union{cylinder{<0, 1.35>, <0, 1.65>, 0.6} hollow} 
 #declare rook_cut1 = difference{object{rook_top} box{<-5,1.5,.3>,<5,1.66,.5>} hollow}   

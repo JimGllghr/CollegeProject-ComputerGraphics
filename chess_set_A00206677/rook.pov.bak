@@ -12,7 +12,9 @@ camera {
 
 #declare base = cone{<0,0> 0.29,<0,0.29>,0.49}
 #declare middle = union{cone{<0,0.29>,0.49,<0,0.39>,0.69} }
-#declare top = union{cylinder{<0,0.39>,<0,1.39>,0.69} } 
+//#declare top = union{cylinder{<0,0.39>,<0,1.39>,0.69} } 
+#declare top = lathe{linear_spline 13, <0,0.39>,<0.69,0.39>,<0.69, 0.59>,<0.65, 0.59>,<0.65, 0.79>,<0.69, 0.79>,<0.69, 0.99>,<0.65, 0.99>,<0.65, 1.19>,<0.69, 1.19>,  <0.69,1.39>,<0,1.39>,<0,0.39>}
+
 #declare glass_bottom = union{cone{<0,1.39>,0.69,<0,1.68>,0.89} texture{Glass}}  
 #declare glass_centre = union{cone{<0,1.68>,0.89,<0,4.68>,1.58} texture{Glass}}
 #declare glass_top = union{difference{sphere{<0,4.68>,1.58} object{glass_centre}} texture{Glass}} 

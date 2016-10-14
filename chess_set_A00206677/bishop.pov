@@ -2,10 +2,6 @@
 #include "metals.inc"
 #include "woods.inc"  
 #include  "textures.inc"
-camera { 
-   location<15,15,15>
-   look_at <0,5,0>
-}
 /*light_source {< 2, 13, -10> color White
 } */
 

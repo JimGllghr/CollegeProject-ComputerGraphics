@@ -1,0 +1,88 @@
+#include "colors.inc"
+#include "metals.inc"
+#include "woods.inc"  
+#include  "textures.inc"
+          /**
+background{White}    
+
+camera 
+{
+    angle 10
+    location <40, 40, 20>
+    look_at <4, 0, 0>
+}    
+              **/
+
+#declare blackTile = box 
+{          
+    <0, 0, 0>,< 1, -1, 1>
+    texture
+    { 
+        uv_mapping
+        pigment
+        {
+            image_map
+            { 
+                png "marble.png"
+                map_type 0    
+                interpolate 2 
+                once
+            } 
+        } 
+    } 
+} 
+#declare whiteTile = box 
+{          
+    <0,-.1,0>,< 1, -1, 1>
+    texture
+    { 
+        uv_mapping
+        pigment
+        {
+            image_map
+            { 
+                png "whitemarble.png"
+                map_type 0    
+                interpolate 2 
+                once 
+            } 
+        } 
+    } 
+}                
+
+#declare tileRow1 = union
+{  
+    object {blackTile translate <0,0,0>} 
+    object {whiteTile translate <1,0,0>}
+    object {blackTile translate <2,0,0>} 
+    object {whiteTile translate <3,0,0>}
+    object {blackTile translate <4,0,0>} 
+    object {whiteTile translate <5,0,0>}
+    object {blackTile translate <6,0,0>}  
+    object {whiteTile translate <7,0,0>}
+}          
+#declare tileRow2 = union
+{                              
+                      
+    object {whiteTile translate <0,0,0>}
+    object {blackTile translate <1,0,0>} 
+    object {whiteTile translate <2,0,0>}
+    object {blackTile translate <3,0,0>} 
+    object {whiteTile translate <4,0,0>}
+    object {blackTile translate <5,0,0>} 
+    object {whiteTile translate <6,0,0>}
+    object {blackTile translate <7,0,0>} 
+}
+
+   
+#declare chessBoard = union
+{  
+object {tileRow1 translate <0,0,0>} 
+object {tileRow2 translate <0,0,1>} 
+object {tileRow1 translate <0,0,2>} 
+object {tileRow2 translate <0,0,3>} 
+object {tileRow1 translate <0,0,4>} 
+object {tileRow2 translate <0,0,5>} 
+object {tileRow1 translate <0,0,6>} 
+object {tileRow2 translate <0,0,7>}    
+}

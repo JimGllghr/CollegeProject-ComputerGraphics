@@ -10,7 +10,8 @@ camera {
 /*light_source {< 2, 13, -10> color White
 }         */
 
-
+   
+    
 #declare base = cone{<0,0> 0.29,<0,0.29>,0.49}
 #declare middle = union{cone{<0,0.29>,0.49,<0,0.39>,0.69} }
 //#declare top = union{cylinder{<0,0.39>,<0,1.39>,0.69} } 

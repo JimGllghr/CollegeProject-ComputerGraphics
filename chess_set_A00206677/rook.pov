@@ -3,10 +3,6 @@
 #include "woods.inc"  
 #include  "textures.inc" 
 #include "rook_outline.pov"
-camera { 
-   location<10,5,10>
-   look_at <1,2,2>
-}
 /*light_source {< 2, 13, -10> color White
 }   */
 

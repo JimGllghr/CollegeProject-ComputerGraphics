@@ -2,14 +2,24 @@
 #include "metals.inc"
 #include "woods.inc"  
 #include  "textures.inc"  
-                  
+                  /**
+background{White}    
+camera 
+{
+    angle 10
+    location <40, 20, 0>
+    look_at <0, 2, 0>
+}    
 
-                    
+light_source 
+{
+    <20, 20, -20> color White
+}                       **/
 
 #declare nixieShell =   
 lathe 
 {
-    17,
+    13,
     <0.0,  0.24>,
     <0.44,   0.25>,
     <0.82,   0.28>,
@@ -22,11 +32,7 @@ lathe
     <0.13,  3.61>,
     <0.07,  3.68>,
     <0.06,  3.82>,
-    <0.14,  3.82>,
-    <0.15,  3.91>,
-    <0.05,  3.91>,
-    <0.05,  4.03>,
-    <0,  4.03>        
+    <0,     3.89>      
     texture{Glass}
 }          
 
@@ -228,4 +234,3 @@ object {prongGold translate <-1.4,0.1,0>}
 object {filiment_Red}               
                    
 }
-                    

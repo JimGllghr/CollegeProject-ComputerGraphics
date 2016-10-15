@@ -2,7 +2,7 @@
 #include "metals.inc"
 #include "woods.inc"  
 #include  "textures.inc"
-
+          /**
 background{White}    
 
 camera 
@@ -11,11 +11,7 @@ camera
     location <40, 40, 20>
     look_at <4, 0, 0>
 }    
-
-light_source 
-{
-    <20, 60, 20> color White
-}           
+              **/
 
 #declare blackTile = box 
 {          
@@ -28,12 +24,12 @@ light_source
             image_map
             { 
                 png "marble.png"
-                map_type 0    // planar
-                interpolate 2 // bilinear
-                once //
-            } //  end of image_map
-        } // end of pigment
-    } // end of texture
+                map_type 0    
+                interpolate 2 
+                once
+            } 
+        } 
+    } 
 } 
 #declare whiteTile = box 
 {          
@@ -46,12 +42,12 @@ light_source
             image_map
             { 
                 png "whitemarble.png"
-                map_type 0    // planar
-                interpolate 2 // bilinear
-                once //
-            } //  end of image_map
-        } // end of pigment
-    } // end of texture
+                map_type 0    
+                interpolate 2 
+                once 
+            } 
+        } 
+    } 
 }                
 
 #declare tileRow1 = union
